@@ -1,0 +1,2 @@
+[console_scripts]
+Cron-Parser = parser.main:main
