@@ -5,6 +5,6 @@ setup(
     packages = ['parser'],
     entry_points = {
         'console_scripts': [
-            'Cron-Parser = parser.main:main'
+            'parse = parser.main:main'
         ]
     })
