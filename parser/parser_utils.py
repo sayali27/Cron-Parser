@@ -32,9 +32,7 @@ def parse_hours(hours_regex: str):
 def parse_day_of_month(days_regex: str):
     pass
 
-def generate_range(start: int, end: int, interval = 1) -> list[int]:
-    values = list()
-    for value in range(start, end+1, interval):
-        values.append(value)
-    return values
+# def generate_range(start: int, end: int, interval = 1) -> str:
+#     values = list(range(start, end+1, interval))
+#     return " ".join(str(val) for val in values)
 
