@@ -1,3 +1,4 @@
+from parser.constants import COMMAND_FIELD_NAME
 from parser.field import FieldType
 from parser.output import output_values
 from parser.factory import factory
@@ -15,7 +16,7 @@ def parse_expression(regex: str):
         times = field.parse(expression)
         parsed_fields[field.name] = times
 
-    parsed_fields["command"] =  tokens[-1]
+    parsed_fields[COMMAND_FIELD_NAME] =  tokens[-1]
     return parsed_fields
 
     

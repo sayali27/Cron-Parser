@@ -6,15 +6,15 @@ class FieldFactory:
     def get_field(self, field_type : FieldType):
         match field_type:
             case FieldType.MINUTE:
-                return Field(MINUTES_START_VALUE, MINUTES_END_VALUE, "minute")
+                return Field(MINUTES_START_VALUE, MINUTES_END_VALUE, MINUTES_FIELD_NAME)
             case FieldType.HOUR:
-                return Field(HOURS_START_VALUE, HOURS_END_VALUE, "hour")
+                return Field(HOURS_START_VALUE, HOURS_END_VALUE, HOURS_FIELD_NAME)
             case FieldType.DAY_OF_MONTH:
-                return Field(DAY_OF_MONTH_START_VALUE, DAY_OF_MONTH_END_VALUE, "day of month")
+                return Field(DAY_OF_MONTH_START_VALUE, DAY_OF_MONTH_END_VALUE, DAY_OF_MONTH_FIELD_NAME)
             case FieldType.MONTH:
-                return Field(MONTHS_START_VALUE, MONTHS_END_VALUE, "month")
+                return Field(MONTHS_START_VALUE, MONTHS_END_VALUE, MONTHS_FIELD_NAME)
             case FieldType.DAY_OF_WEEK:
-                return Field(DAY_OF_WEEK_START_VALUE, DAY_OF_WEEK_END_VALUE, "day of week")
+                return Field(DAY_OF_WEEK_START_VALUE, DAY_OF_WEEK_END_VALUE, DAY_OF_WEEK_FIELD_NAME)
             case _:
                 print(f"{field_type} Came in default case") 
                 return Field(0, 0)
