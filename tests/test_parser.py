@@ -40,8 +40,8 @@ test_data = [
 exception_test_data = [
     (
         "1,5 1-3,7 5 cmd",
-        ValueError,
-        "Expression size does not match the size of supported fields 5"
+        SyntaxError,
+        "Expression size does not match the size of supported time fields 5"
     ),
     (
         "*/60 1,5 1-3,7 5 * cmd",
@@ -62,8 +62,7 @@ exception_test_data = [
         "20 1 3 5 ? cmd/temp",
         ValueError,
         "Unsupported expression: ?"
-    )
-
+    ),
 ]
 
 def format_output(output):

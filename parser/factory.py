@@ -1,9 +1,10 @@
 from parser.constants import *
 from parser.field import Field, FieldType
 
-
 class FieldFactory:
+
     def get_field(self, field_type : FieldType):
+        """Constructs the object for the time field according to the type of the field"""
         match field_type:
             case FieldType.MINUTE:
                 return Field(MINUTES_START_VALUE, MINUTES_END_VALUE, MINUTES_FIELD_NAME)
@@ -16,7 +17,6 @@ class FieldFactory:
             case FieldType.DAY_OF_WEEK:
                 return Field(DAY_OF_WEEK_START_VALUE, DAY_OF_WEEK_END_VALUE, DAY_OF_WEEK_FIELD_NAME)
             case _:
-                print(f"{field_type} Came in default case") 
-                return Field(0, 0)
+                raise NotImplementedError(f"Unsupported field_type: {str(field_type)}")
 
 factory = FieldFactory()
